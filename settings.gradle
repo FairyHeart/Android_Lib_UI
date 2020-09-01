@@ -1,0 +1,3 @@
+include ':lib_ui'
+include ':app'
+rootProject.name = "Android_Lib_UI"
