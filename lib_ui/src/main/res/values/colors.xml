@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+
+    <color name="white_0alpha">#00ffffff</color>
+    <color name="white_1alpha">#19ffffff</color>
+    <color name="white_2alpha">#33ffffff</color>
+    <color name="white_3alpha">#4cffffff</color>
+    <color name="white_4alpha">#66ffffff</color>
+    <color name="white_5alpha">#7fffffff</color>
+    <color name="white_6alpha">#99ffffff</color>
+    <color name="white_7alpha">#b2ffffff</color>
+    <color name="white_8alpha">#c8ffffff</color>
+    <color name="white_9alpha">#e5ffffff</color>
+
+    <color name="white">#FFFFFF</color>
+
+</resources>

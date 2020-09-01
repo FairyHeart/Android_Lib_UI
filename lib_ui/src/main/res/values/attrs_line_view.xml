@@ -1,0 +1,19 @@
+<resources>
+    <!-- 垂直方向的虚线 -->
+    <declare-styleable name="DividerView">
+        <!-- 虚线颜色 -->
+        <attr name="divider_line_color" format="color"/>
+        <!-- 虚线宽度 -->
+        <attr name="dash_thickness" format="dimension"/>
+        <!-- 虚线dash宽度 -->
+        <attr name="dash_length" format="dimension"/>
+        <!-- 虚线dash间隔 -->
+        <attr name="dash_gap" format="dimension"/>
+        <!-- 虚线朝向 -->
+        <attr name="divider_orientation" format="enum">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+    </declare-styleable>
+
+</resources>
