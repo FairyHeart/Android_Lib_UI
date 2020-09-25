@@ -33,19 +33,17 @@ class DividerView @JvmOverloads constructor(
         var dashLength = 5
         var dashThickness = 3
         var color: Int = -0x1000000
-        if (context != null) {
-            val array = context.obtainStyledAttributes(attrs, R.styleable.DividerView)
-            try {
-                dashGap = array.getDimensionPixelSize(R.styleable.DividerView_dash_gap, 5)
-                dashLength = array.getDimensionPixelSize(R.styleable.DividerView_dash_length, 5)
-                dashThickness =
-                    array.getDimensionPixelSize(R.styleable.DividerView_dash_thickness, 3)
-                color = array.getColor(R.styleable.DividerView_divider_line_color, -0x1000000)
-                orientation =
-                    array.getInt(R.styleable.DividerView_divider_orientation, 0)
-            } finally {
-                array.recycle()
-            }
+        val array = context.obtainStyledAttributes(attrs, R.styleable.DividerView)
+        try {
+            dashGap = array.getDimensionPixelSize(R.styleable.DividerView_dash_gap, 5)
+            dashLength = array.getDimensionPixelSize(R.styleable.DividerView_dash_length, 5)
+            dashThickness =
+                array.getDimensionPixelSize(R.styleable.DividerView_dash_thickness, 3)
+            color = array.getColor(R.styleable.DividerView_divider_line_color, -0x1000000)
+            orientation =
+                array.getInt(R.styleable.DividerView_divider_orientation, 0)
+        } finally {
+            array.recycle()
         }
 
         mPaint = Paint()
