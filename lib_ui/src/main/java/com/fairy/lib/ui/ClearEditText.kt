@@ -42,9 +42,7 @@ class ClearEditText(context: Context, attrs: AttributeSet?, defStyle: Int) :
      */
     var onTextChanged: OnTextChanged? = null
 
-    val onTextChangeLiveData by lazy {
-        MutableLiveData<String?>()
-    }
+    val onTextChangeLiveData = MutableLiveData<String?>()
 
     init {
         init()
