@@ -10,6 +10,7 @@ import android.view.View
 import android.view.View.OnFocusChangeListener
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.MutableLiveData
 
 /**
  * 输入文本框 右边有自带的删除按钮 当有输入时，显示删除按钮，当无输入时，不显示删除按钮。
@@ -40,6 +41,10 @@ class ClearEditText(context: Context, attrs: AttributeSet?, defStyle: Int) :
      * 内容变化监听器
      */
     var onTextChanged: OnTextChanged? = null
+
+    val onTextChangeLiveData by lazy {
+        MutableLiveData<String?>()
+    }
 
     init {
         init()
@@ -121,6 +126,7 @@ class ClearEditText(context: Context, attrs: AttributeSet?, defStyle: Int) :
             setClearIconVisible(s.isNotEmpty())
         }
         onTextChanged?.onTextChanged(s, start, count, after)
+        onTextChangeLiveData.value = s.toString()
     }
 
     override fun beforeTextChanged(
